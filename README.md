@@ -28,28 +28,29 @@ Automatically classify plant leaf images based on their disease type (or healthy
 ## 📁 Project Structure
 plant-disease-detection/
 │
-├── data/                      # Local dataset (not pushed to GitHub)
+├── data/                        # Local dataset (NOT pushed to GitHub)
 │   └── PlantVillage/
 │
-├── outputs/                   # Trained models, saved figures (ignored by .gitignore)
-│   ├── models/
-│   └── figures/
+├── outputs/                     # Trained models, saved figures (ignored via .gitignore)
+│   ├── models/                  # Saved .pth weights
+│   └── figures/                 # Confusion matrices, ROC curves, etc.
 │
-├── src/                       # Source code modules
-│   ├── model.py               # CNN and ResNet18 architectures
-│   ├── train.py               # Training function
-│   └── data.py                # Data loading logic
+├── src/                         # Source code modules
+│   ├── model.py                 # CNN and ResNet18 architectures
+│   ├── train.py                 # Training function
+│   └── data.py                  # Data loading and preprocessing
 │
-├── notebooks/                 # Interactive notebooks
-│   ├── train_cnn.ipynb        # From-scratch CNN training
-│   └── train_resnet.ipynb     # Transfer learning with ResNet
+├── notebooks/                   # Jupyter notebooks for experimentation
+│   ├── train_cnn.ipynb          # CNN from scratch
+│   └── train_resnet.ipynb       # Transfer learning (ResNet)
 │
-├── report/                    # The report
+├── report/                      # Documentation (LaTeX compiled PDF only)
+│   └── plant_disease_report.pdf
 │
-├── requirements.txt           # Python dependencies
-├── .gitignore                 # Ignore unnecessary files
-├── README.md                  # Project overview
-└── LICENSE (optional)
+├── requirements.txt             # Python dependencies
+├── .gitignore                   # Ignore datasets, logs, outputs, etc.
+├── README.md                    # Project overview and usage
+└── LICENSE                      # (Optional) project license
 
 
 ## 📄 Documentation
